@@ -25,7 +25,7 @@ void find(){
     puts("-----------------------------------");
 
     for(i=0;i<NUM_ADS;i++){
-        if (strstr(ADS[i],"sport") && ! strstr(ADS[i],"bieber")){
+        if (strstr(ADS[i],"spo") && ! strstr(ADS[i],"bieber")){
         printf("%s\n",ADS[i]);
         }
     }
