@@ -22,8 +22,7 @@ int arts_theater_or_dining(char* s);
 
 
 int main(void){
-
-
+    
     find(sport_no_bieber);
     find(sport_or_workout);
     find(ns_theater);
@@ -46,6 +45,9 @@ void find( int (*match )(char* ) ){     //match是個指標變數的名稱，所
 }
 
 int sport_no_bieber(char *s){
+    int a;
+    a=strstr(s,"sport") && ! strstr(s,"bieber");
+    printf("a is %d\n",a);
     return strstr(s,"sport") && ! strstr(s,"bieber");
 }
 
