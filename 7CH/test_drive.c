@@ -32,7 +32,7 @@ int compare_areas(const void* a, const void* b)
 
 int compare_names(const void* a,const void* b)
 {
-    char** sa = (char**) a;  //後面有無括弧差別
+    char** sa = (char**) a;  //後面有無括弧差別,正確的做法是一定要把(char**)括起來
     char** sb = (char**) b;
     return strcmp(*sa,*sb);
 }
