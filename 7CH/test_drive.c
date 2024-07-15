@@ -34,6 +34,7 @@ int compare_names(const void* a,const void* b)
 {
     char** sa = (char**) a;  //後面有無括弧差別,正確的做法是一定要把(char**)括起來
     char** sb = (char**) b;
+    printf("strcmp is %d\n",strcmp(*sa,*sb));
     return strcmp(*sa,*sb);
 }
 
