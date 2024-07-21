@@ -41,6 +41,11 @@ int main()
     printf("main test  %d\n", MUDSLIDE);
     printf("Price is %.2f\n", total(2, MONKEY_GLAND, MUDSLIDE));
     printf("Price is %.2f\n", total(3, MONKEY_GLAND, MUDSLIDE, FUZZY_NAVEL));
-    printf("Price is %.2f\n", total(1, ZOMBIE));
+    printf("Price is %.2f\n", total(1, ZOMBIE)); 
+    /*
+     * 因為透過了enum的功能，使得MONKEY_GLAND, MUDSLIDE...等東西，都會
+     * 變成數值，然後在下面使用的時候，他就是以數值的方式去呼叫，但我想知道他的工作流程與走向
+     * 這個我想造在問問
+     */
     return 0;
 }
