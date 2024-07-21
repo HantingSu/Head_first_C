@@ -21,7 +21,7 @@ double price (enum drink d)
  return 0;
 }
 
-double total(int args, ...)
+double total(int args,  ...)  //must add ... when you don't know how many arg you want to use
 {
     double total=0;
     va_list ap;
@@ -29,15 +29,16 @@ double total(int args, ...)
     int i;
     printf("va is %d\n",*ap);  //I want to know what is ap?
     for(i=0; i<args; i++){
-    enum drink d = va_arg(ap, enum drink);
-    total += price(d);
+    enum drink d = va_arg(ap, enum drink);  //第二個參數位置是放資料型
+    total += price(d);      //要去呼叫已經成為資料型態的drink中，將資料放在switch中的數值
     }
-    va_end(ap);
+    va_end(ap);         //結束這個ap,如果我不寫這個，會怎麼樣？
     return total;
 }
 
 int main()
 {
+    printf("main test  %d\n", MUDSLIDE);
     printf("Price is %.2f\n", total(2, MONKEY_GLAND, MUDSLIDE));
     printf("Price is %.2f\n", total(3, MONKEY_GLAND, MUDSLIDE, FUZZY_NAVEL));
     printf("Price is %.2f\n", total(1, ZOMBIE));
